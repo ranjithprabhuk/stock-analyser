@@ -1,0 +1,515 @@
+import { useState, useEffect, useMemo } from 'react';
+import {
+  useReactTable,
+  getCoreRowModel,
+  getSortedRowModel,
+  getPaginationRowModel,
+  flexRender,
+} from '@tanstack/react-table';
+import type { ColumnDef, VisibilityState } from '@tanstack/react-table';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  TablePagination,
+  IconButton,
+  Button,
+  Box,
+  Typography,
+  Tooltip,
+  Menu,
+  MenuItem,
+  Checkbox,
+  FormControlLabel,
+  CircularProgress,
+  Snackbar,
+  Alert,
+  Select,
+  FormControl,
+  // Switch,
+} from '@mui/material';
+import ViewColumnIcon from '@mui/icons-material/ViewColumn';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import type { StockHolding } from '../types/portfolio';
+import { StockAnalysisModal } from './StockAnalysisModal';
+
+const Rating = {
+  STRONG_BUY: 'Strong Buy',
+  BUY: 'Buy',
+  HOLD: 'Hold',
+  SELL: 'Sell',
+  STRONG_SELL: 'Strong Sell',
+} as const;
+
+type RatingValue = (typeof Rating)[keyof typeof Rating];
+
+interface StockRatings {
+  [ticker: string]: {
+    gemini_rating?: RatingValue;
+    perplexity_rating?: RatingValue;
+    alpha_spread_rating?: RatingValue;
+    custom_rating?: RatingValue;
+  };
+}
+
+interface PortfolioTableProps {
+  data: StockHolding[];
+  loading: boolean;
+}
+
+const formatCurrency = (value: number) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+};
+
+const formatPercentage = (value: number) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'percent',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value / 100);
+};
+
+export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
+  const [sorting, setSorting] = useState<{ id: string; desc: boolean }[]>([]);
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+  const [columnOrder, setColumnOrder] = useState<string[]>([]);
+  const [columnSizing, setColumnSizing] = useState<Record<string, number>>({});
+  const [selectedStock, setSelectedStock] = useState<StockHolding | null>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [pagination, setPagination] = useState({
+    pageIndex: 0,
+    pageSize: 10,
+  });
+  const [copySnackbarOpen, setCopySnackbarOpen] = useState(false);
+  const [stockRatings, setStockRatings] = useState<StockRatings>({});
+
+  // Load saved table settings from localStorage
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('portfolioTableSettings');
+    if (savedSettings) {
+      const { visibility, order, sizing } = JSON.parse(savedSettings);
+      setColumnVisibility(visibility || {});
+      setColumnOrder(order || []);
+      setColumnSizing(sizing || {});
+    }
+
+    // Load saved ratings from localStorage
+    const savedRatings = localStorage.getItem('stockRatings');
+    if (savedRatings) {
+      setStockRatings(JSON.parse(savedRatings));
+    }
+  }, []);
+
+  // Save table settings to localStorage when they change
+  useEffect(() => {
+    const settings = {
+      visibility: columnVisibility,
+      order: columnOrder,
+      sizing: columnSizing,
+    };
+    localStorage.setItem('portfolioTableSettings', JSON.stringify(settings));
+  }, [columnVisibility, columnOrder, columnSizing]);
+
+  const handleCopyAnalysisPrompt = async (stock: StockHolding) => {
+    const analysisPrompt = `${stock.name} ${stock.ticker}
+Analyze the stock and provide a detailed long-term investment recommendation: Strong Buy, Buy, Hold, Sell or Strong Sell.
+Your analysis should include the following sections:
+Company Overview
+ – Brief description of business model, core products/services, industry positioning, and key markets served.
+Financial Health
+ – Trends in revenue, EBITDA, and net profit over the last 5 years till the latest 2025 financials
+ – Profitability metrics (Operating Margin, Net Margin, ROE, ROCE)
+ – Balance sheet strength (Debt-to-Equity, Interest Coverage)
+ – Free cash flow consistency
+Valuation
+ – Analyze valuation multiples: P/E, P/B, P/S, EV/EBITDA, PEG ratio
+ – Compare with historical averages and industry peers
+Growth Prospects & Projected CAGR
+ – Growth outlook based on industry trends, market expansion, product pipeline, and analyst projections
+ – Include expected revenue and/or earnings CAGR over the next 5–10 years
+Risks & Challenges
+ – Key business, financial, industry, or regulatory risks
+ – Dependency on few products/customers, global exposure, etc.
+Competitive Advantage & Moat
+ – Does the company have durable competitive advantages?
+ – Assess brand value, IP, cost leadership, switching costs, etc.
+Promoter & Management Integrity
+ – Track record of promoters and leadership team
+ – Corporate governance, related-party transactions, share pledging, and past controversies (if any)
+(Optional) ESG Factors
+ – Environmental, social, or governance factors that may impact the business
+✅ Conclusion – Investment Recommendation
+– Provide a clear Buy, Hold, or Sell rating for long-term holding (5–10 years)
+– Justify your rating with supporting data and assumptions
+– Include a summary of projected long-term CAGR and risk/reward profile.`;
+
+    try {
+      await navigator.clipboard.writeText(analysisPrompt);
+      setCopySnackbarOpen(true);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
+
+  const columns = useMemo<ColumnDef<StockHolding>[]>(
+    () => [
+      {
+        accessorKey: 'logo',
+        header: '',
+        cell: ({ row }) => (
+          <img
+            src={row.original.logo}
+            alt={row.original.ticker}
+            style={{ width: 30, height: 30, borderRadius: '50%' }}
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = 'https://via.placeholder.com/30';
+            }}
+          />
+        ),
+        size: 50,
+      },
+      {
+        accessorKey: 'ticker',
+        header: 'Ticker',
+        size: 100,
+      },
+      {
+        accessorKey: 'name',
+        header: 'Company',
+        size: 200,
+      },
+      {
+        accessorKey: 'sector',
+        header: 'Sector',
+        size: 150,
+      },
+      {
+        accessorKey: 'quantity',
+        header: 'Quantity',
+        cell: ({ getValue }) => getValue<number>().toFixed(2),
+        size: 100,
+      },
+      {
+        accessorKey: 'avg_price',
+        header: 'Avg. Price',
+        cell: ({ getValue }) => formatCurrency(getValue<number>()),
+        size: 120,
+      },
+      {
+        accessorKey: 'live_price',
+        header: 'Live Price',
+        cell: ({ getValue }) => formatCurrency(getValue<number>()),
+        size: 120,
+      },
+      {
+        accessorKey: 'invested_amount',
+        header: 'Invested',
+        cell: ({ getValue }) => formatCurrency(getValue<number>()),
+        size: 120,
+      },
+      {
+        accessorKey: 'current_value',
+        header: 'Current Value',
+        cell: ({ getValue }) => formatCurrency(getValue<number>()),
+        size: 140,
+      },
+      {
+        accessorKey: 'total_profit_loss',
+        header: 'P&L',
+        cell: ({ row }) => {
+          const value = row.original.total_profit_loss;
+          const isPositive = value >= 0;
+          return (
+            <span style={{ color: isPositive ? 'green' : 'red' }}>
+              {formatCurrency(value)} ({isPositive ? '+' : ''}
+              {formatPercentage(row.original.total_percent_change)})
+            </span>
+          );
+        },
+        size: 150,
+      },
+      {
+        id: 'gemini_rating',
+        header: 'Gemini Rating',
+        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="gemini_rating" />,
+        size: 140,
+      },
+      {
+        id: 'perplexity_rating',
+        header: 'Perplexity Rating',
+        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="perplexity_rating" />,
+        size: 140,
+      },
+      {
+        id: 'alpha_spread_rating',
+        header: 'Alpha Spread Rating',
+        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="alpha_spread_rating" />,
+        size: 160,
+      },
+      {
+        id: 'custom_rating',
+        header: 'Custom Rating',
+        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="custom_rating" />,
+        size: 140,
+      },
+      {
+        id: 'copy',
+        header: 'Copy',
+        cell: ({ row }) => (
+          <Tooltip title="Copy analysis prompt">
+            <IconButton size="small" onClick={() => handleCopyAnalysisPrompt(row.original)} color="primary">
+              <ContentCopyIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
+        ),
+        size: 80,
+      },
+      // {
+      //   id: 'actions',
+      //   header: 'Actions',
+      //   cell: ({ row }) => (
+      //     <Button variant="outlined" size="small" onClick={() => setSelectedStock(row.original)}>
+      //       Analyze
+      //     </Button>
+      //   ),
+      //   size: 120,
+      // },
+    ],
+    []
+  );
+
+  const table = useReactTable({
+    data,
+    columns,
+    state: {
+      sorting,
+      columnVisibility,
+      columnOrder,
+      columnSizing,
+      pagination,
+    },
+    onSortingChange: setSorting,
+    onColumnVisibilityChange: setColumnVisibility,
+    onColumnOrderChange: setColumnOrder,
+    onColumnSizingChange: setColumnSizing,
+    onPaginationChange: setPagination,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    columnResizeMode: 'onChange',
+  });
+
+  const handleColumnMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleColumnMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const toggleColumnVisibility = (columnId: string) => {
+    table.getColumn(columnId)?.toggleVisibility();
+  };
+
+  const handleChangePage = (_event: unknown, newPage: number) => {
+    setPagination((prev) => ({
+      ...prev,
+      pageIndex: newPage,
+    }));
+  };
+
+  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPagination({
+      pageIndex: 0,
+      pageSize: parseInt(event.target.value, 10),
+    });
+  };
+
+  const handleCloseSnackbar = () => {
+    setCopySnackbarOpen(false);
+  };
+
+  const handleRatingChange = (ticker: string, ratingType: keyof StockRatings[string], value: RatingValue) => {
+    const updatedRatings = {
+      ...stockRatings,
+      [ticker]: {
+        ...stockRatings[ticker],
+        [ratingType]: value,
+      },
+    };
+    setStockRatings(updatedRatings);
+    localStorage.setItem('stockRatings', JSON.stringify(updatedRatings));
+  };
+
+  const RatingSelector = ({ ticker, ratingType }: { ticker: string; ratingType: keyof StockRatings[string] }) => {
+    const currentRating = stockRatings[ticker]?.[ratingType] || '';
+
+    return (
+      <FormControl size="small" sx={{ minWidth: 120 }}>
+        <Select
+          value={currentRating}
+          onChange={(e) => handleRatingChange(ticker, ratingType, e.target.value as RatingValue)}
+          displayEmpty
+          sx={{ fontSize: '0.875rem' }}
+        >
+          <MenuItem value="">
+            <em>Not Set</em>
+          </MenuItem>
+          {Object.values(Rating).map((rating) => (
+            <MenuItem key={rating} value={rating}>
+              {rating}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    );
+  };
+
+  if (loading) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="200px">
+        <Box textAlign="center">
+          <CircularProgress />
+          <Typography variant="body1" mt={2}>
+            Loading portfolio data...
+          </Typography>
+        </Box>
+      </Box>
+    );
+  }
+
+  if (data.length === 0) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="200px" p={4} textAlign="center">
+        <Typography variant="h6" color="text.secondary">
+          No portfolio data available. Please upload a file or fetch from IndMoney.
+        </Typography>
+      </Box>
+    );
+  }
+
+  return (
+    <Box sx={{ width: '100%', overflow: 'hidden' }}>
+      <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+        <Typography variant="h6" color="text.primary">
+          Your Portfolio
+        </Typography>
+        <Tooltip title="Configure columns">
+          <IconButton onClick={handleColumnMenuOpen}>
+            <ViewColumnIcon />
+          </IconButton>
+        </Tooltip>
+      </Box>
+
+      <Paper sx={{ width: '100%', mb: 2 }}>
+        <TableContainer>
+          <Table stickyHeader>
+            <TableHead>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <TableRow key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <TableCell
+                      key={header.id}
+                      sx={{
+                        fontWeight: 'bold',
+                        whiteSpace: 'nowrap',
+                        cursor: header.column.getCanSort() ? 'pointer' : 'default',
+                        backgroundColor: 'background.paper',
+                      }}
+                      onClick={header.column.getToggleSortingHandler()}
+                    >
+                      {/* <TableSortLabel
+                        active={!!header.column.getIsSorted()}
+                        direction={header.column.getIsSorted() as 'asc' | 'desc' | undefined}
+                      > */}
+                      {flexRender(header.column.columnDef.header, header.getContext())}
+                      {/* </TableSortLabel> */}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableHead>
+            <TableBody>
+              {table.getRowModel().rows.map((row) => (
+                <TableRow key={row.id} hover sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell
+                      key={cell.id}
+                      sx={{
+                        py: 1.5,
+                        borderBottom: '1px solid',
+                        borderColor: 'divider',
+                      }}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Paper>
+
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25, 50]}
+        component="div"
+        count={data.length}
+        rowsPerPage={pagination.pageSize}
+        page={pagination.pageIndex}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+
+      <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleColumnMenuClose}>
+        <MenuItem>
+          <Typography variant="subtitle2" fontWeight="bold">
+            Toggle Columns
+          </Typography>
+        </MenuItem>
+        {table.getAllLeafColumns().map((column) => {
+          const headerText = column.columnDef.header;
+          const displayLabel =
+            headerText && typeof headerText === 'string' && headerText.trim()
+              ? headerText
+              : column.id === 'logo'
+              ? 'Logo'
+              : column.id || 'Column';
+
+          return (
+            <MenuItem key={column.id}>
+              <FormControlLabel
+                control={
+                  <Checkbox checked={column.getIsVisible()} onChange={() => toggleColumnVisibility(column.id)} />
+                }
+                label={String(displayLabel)}
+              />
+            </MenuItem>
+          );
+        })}
+      </Menu>
+
+      <Snackbar
+        open={copySnackbarOpen}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
+          Analysis prompt copied to clipboard!
+        </Alert>
+      </Snackbar>
+
+      <StockAnalysisModal open={!!selectedStock} onClose={() => setSelectedStock(null)} stock={selectedStock} />
+    </Box>
+  );
+};

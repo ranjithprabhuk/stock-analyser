@@ -1,0 +1,4041 @@
+{
+  "data": [
+    {
+      "avg_price": 173.42,
+
+      "company_code": "dummy",
+
+      "current_value": 529.42,
+
+      "invested_amount": 475.16,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 193.22,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/GOOGL@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Alphabet Inc. - Class A Shares",
+
+      "quantity": 2.74,
+
+      "sector": "Technology Services",
+
+      "ticker": "GOOGL",
+
+      "todays_percent_change": 0.55,
+
+      "todays_profit_loss": 2.9,
+
+      "total_percent_change": 11.42,
+
+      "total_profit_loss": 54.26,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/alphabet-inc-class-a-shares-share-price-googl",
+
+      "eventNudge": {
+        "bgColor": "#E8F4FD",
+
+        "icon": {
+          "png": "https://indcdn.indmoney.com/public/images/bell_dark_icon.png"
+        },
+
+        "text": {
+          "text": "Earnings Alert",
+
+          "color": "#47494C",
+
+          "font": "Caption"
+        },
+
+        "info_bottomsheet": {
+          "title": "Earnings Alert",
+
+          "content_data": [
+            {
+              "description": "<div style=\"font-family:AvenirNext-Medium;font-size:13px;color:#191C1F\"><p><span style=\"color:#191C1F\"></span>Alphabet Inc. reported Q2 2025 revenue of $96.4 billion, exceeding estimates by $2.4 billion, with EPS of $2.31, up 22% year-over-year.</p>\n</div>"
+            }
+          ]
+        },
+
+        "cta": {
+          "title": {
+            "text": "View",
+
+            "color": "#017AFF",
+
+            "font": "Caption"
+          },
+
+          "type": "bottomsheet",
+
+          "eventName": "nudgeBottomsheet"
+        }
+      }
+    },
+
+    {
+      "avg_price": 94.81,
+
+      "company_code": "dummy",
+
+      "current_value": 545.06,
+
+      "invested_amount": 473.09,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 109.23,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/ILMN@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Illumina Inc.",
+
+      "quantity": 4.99,
+
+      "sector": "Health Technology",
+
+      "ticker": "ILMN",
+
+      "todays_percent_change": 1.48,
+
+      "todays_profit_loss": 7.95,
+
+      "total_percent_change": 15.21,
+
+      "total_profit_loss": 71.97,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/illumina-inc-share-price-ilmn"
+    },
+
+    {
+      "avg_price": 182.36,
+
+      "company_code": "dummy",
+
+      "current_value": 601.94,
+
+      "invested_amount": 446.77,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 245.69,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/TSM@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Taiwan Semiconductor Manufacturing Co.",
+
+      "quantity": 2.45,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "TSM",
+
+      "todays_percent_change": 1.69,
+
+      "todays_profit_loss": 10.0,
+
+      "total_percent_change": 34.73,
+
+      "total_profit_loss": 155.17,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "ad",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/taiwan-semiconductor-manufacturing-co-share-price-tsm",
+
+      "eventNudge": {
+        "bgColor": "#E8F4FD",
+
+        "icon": {
+          "png": "https://indcdn.indmoney.com/public/images/bell_dark_icon.png"
+        },
+
+        "text": {
+          "text": "Revenue Growth Alert",
+
+          "color": "#47494C",
+
+          "font": "Caption"
+        },
+
+        "info_bottomsheet": {
+          "title": "Revenue Growth Alert",
+
+          "content_data": [
+            {
+              "description": "<div style=\"font-family:AvenirNext-Medium;font-size:13px;color:#191C1F\"><p><span style=\"color:#191C1F\"></span>TSMC anticipates 30% revenue growth in 2025, raising its outlook due to strong demand for AI chips and advanced technology.</p>\n</div>"
+            }
+          ]
+        },
+
+        "cta": {
+          "title": {
+            "text": "View",
+
+            "color": "#017AFF",
+
+            "font": "Caption"
+          },
+
+          "type": "bottomsheet",
+
+          "eventName": "nudgeBottomsheet"
+        }
+      }
+    },
+
+    {
+      "avg_price": 84.03,
+
+      "company_code": "dummy",
+
+      "current_value": 444.14,
+
+      "invested_amount": 440.31,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 84.76,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/MRK@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Merck & Co. Inc.",
+
+      "quantity": 5.24,
+
+      "sector": "Health Technology",
+
+      "ticker": "MRK",
+
+      "todays_percent_change": 0.77,
+
+      "todays_profit_loss": 3.39,
+
+      "total_percent_change": 0.87,
+
+      "total_profit_loss": 3.83,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/merck-co-inc-share-price-mrk"
+    },
+
+    {
+      "avg_price": 181.74,
+
+      "company_code": "dummy",
+
+      "current_value": 392.06,
+
+      "invested_amount": 378.01,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 188.49,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/TM@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Toyota Motor Corporation",
+
+      "quantity": 2.08,
+
+      "sector": "Consumer Durables",
+
+      "ticker": "TM",
+
+      "todays_percent_change": -1.65,
+
+      "todays_profit_loss": -6.58,
+
+      "total_percent_change": 3.72,
+
+      "total_profit_loss": 14.05,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "ad",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/toyota-motor-corporation-share-price-tm"
+    },
+
+    {
+      "avg_price": 191.07,
+
+      "company_code": "dummy",
+
+      "current_value": 344.94,
+
+      "invested_amount": 374.49,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 175.99,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/us_stock/49/PNRG.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Primeenergy Resources Corp",
+
+      "quantity": 1.96,
+
+      "sector": "Energy Minerals",
+
+      "ticker": "PNRG",
+
+      "todays_percent_change": 0.16,
+
+      "todays_profit_loss": 0.55,
+
+      "total_percent_change": -7.89,
+
+      "total_profit_loss": -29.55,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/primeenergy-resources-corp-share-price-pnrg"
+    },
+
+    {
+      "avg_price": 145.22,
+
+      "company_code": "dummy",
+
+      "current_value": 418.94,
+
+      "invested_amount": 328.19,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 185.37,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/FSLR@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "First Solar, Inc.",
+
+      "quantity": 2.26,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "FSLR",
+
+      "todays_percent_change": 2.57,
+
+      "todays_profit_loss": 10.5,
+
+      "total_percent_change": 27.65,
+
+      "total_profit_loss": 90.75,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/first-solar-inc-share-price-fslr"
+    },
+
+    {
+      "avg_price": 3.25,
+
+      "company_code": "dummy",
+
+      "current_value": 51.0,
+
+      "invested_amount": 325.09,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 0.51,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/placeholderus.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Newgenivf Ltd",
+
+      "quantity": 100.0,
+
+      "sector": "Miscellaneous",
+
+      "ticker": "NIVF",
+
+      "todays_percent_change": -7.27,
+
+      "todays_profit_loss": -4.0,
+
+      "total_percent_change": -84.31,
+
+      "total_profit_loss": -274.09,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/newgenivf-ltd-share-price-nivf"
+    },
+
+    {
+      "avg_price": 152.56,
+
+      "company_code": "dummy",
+
+      "current_value": 302.23,
+
+      "invested_amount": 318.84,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 144.61,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/FANG@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Diamondback Energy, Inc.",
+
+      "quantity": 2.09,
+
+      "sector": "Energy Minerals",
+
+      "ticker": "FANG",
+
+      "todays_percent_change": -0.47,
+
+      "todays_profit_loss": -1.43,
+
+      "total_percent_change": -5.21,
+
+      "total_profit_loss": -16.61,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/diamondback-energy-inc-share-price-fang"
+    },
+
+    {
+      "avg_price": 71.99,
+
+      "company_code": "dummy",
+
+      "current_value": 286.84,
+
+      "invested_amount": 287.97,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 71.71,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/NVO@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Novo Nordisk A/s",
+
+      "quantity": 4.0,
+
+      "sector": "Health Technology",
+
+      "ticker": "NVO",
+
+      "todays_percent_change": 1.39,
+
+      "todays_profit_loss": 3.93,
+
+      "total_percent_change": -0.39,
+
+      "total_profit_loss": -1.13,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "ad",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/novo-nordisk-as-share-price-nvo"
+    },
+
+    {
+      "avg_price": 173.24,
+
+      "company_code": "dummy",
+
+      "current_value": 289.72,
+
+      "invested_amount": 285.85,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 175.59,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/STZ@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Constellation Brands Inc.",
+
+      "quantity": 1.65,
+
+      "sector": "Consumer Non-Durables",
+
+      "ticker": "STZ",
+
+      "todays_percent_change": -0.03,
+
+      "todays_profit_loss": -0.09,
+
+      "total_percent_change": 1.36,
+
+      "total_profit_loss": 3.87,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/constellation-brands-inc-share-price-stz"
+    },
+
+    {
+      "avg_price": 103.67,
+
+      "company_code": "dummy",
+
+      "current_value": 432.85,
+
+      "invested_amount": 269.54,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 166.48,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/AMD@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Advanced Micro Devices, Inc.",
+
+      "quantity": 2.6,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "AMD",
+
+      "todays_percent_change": 2.69,
+
+      "todays_profit_loss": 11.34,
+
+      "total_percent_change": 60.59,
+
+      "total_profit_loss": 163.31,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/advanced-micro-devices-inc-share-price-amd"
+    },
+
+    {
+      "avg_price": 0.52,
+
+      "company_code": "dummy",
+
+      "current_value": 159.34,
+
+      "invested_amount": 264.78,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753454417,
+
+      "live_price": 0.31,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/us_stock/48/MRSN.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Mersana Therapeutics Inc",
+
+      "quantity": 514.0,
+
+      "sector": "Health Technology",
+
+      "ticker": "MRSN",
+
+      "todays_percent_change": -3.13,
+
+      "todays_profit_loss": -5.15,
+
+      "total_percent_change": -39.82,
+
+      "total_profit_loss": -105.44,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/mersana-therapeutics-inc-share-price-mrsn",
+
+      "eventNudge": {
+        "bgColor": "#E8F4FD",
+
+        "icon": {
+          "png": "https://indcdn.indmoney.com/public/images/bell_dark_icon.png"
+        },
+
+        "text": {
+          "text": "Event: Reverse Stock Split (25:1) on 28th Jul",
+
+          "color": "#47494C",
+
+          "font": "Caption"
+        },
+
+        "info_bottomsheet": {
+          "title": "Event: Reverse Stock Split (25:1) on 28th Jul",
+
+          "content_data": [
+            {
+              "description": "<div style=\"font-family:AvenirNext-Medium;font-size:13px;color:#191C1F\"><p><span style=\"color:#191C1F\"></span>Mersana Therapeutics Inc will implement a 25:1 reverse stock split effective 28-Jul-2025.Shareholders will receive 1 share for every 25 shares previously held, with the stock’s face value adjusted accordingly</p>\n</div>"
+            }
+          ]
+        },
+
+        "cta": {
+          "title": {
+            "text": "View",
+
+            "color": "#017AFF",
+
+            "font": "Caption"
+          },
+
+          "type": "bottomsheet",
+
+          "eventName": "nudgeBottomsheet"
+        }
+      }
+    },
+
+    {
+      "avg_price": 3.64,
+
+      "company_code": "dummy",
+
+      "current_value": 255.0,
+
+      "invested_amount": 247.47,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 3.75,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/us_stock/49/EGY.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Vaalco Energy Inc",
+
+      "quantity": 68.0,
+
+      "sector": "Energy Minerals",
+
+      "ticker": "EGY",
+
+      "todays_percent_change": -2.09,
+
+      "todays_profit_loss": -5.44,
+
+      "total_percent_change": 3.04,
+
+      "total_profit_loss": 7.53,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/vaalco-energy-inc-share-price-egy"
+    },
+
+    {
+      "avg_price": 101.68,
+
+      "company_code": "dummy",
+
+      "current_value": 284.33,
+
+      "invested_amount": 237.93,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 121.51,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/DIS@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "The Walt Disney Company",
+
+      "quantity": 2.34,
+
+      "sector": "Consumer Services",
+
+      "ticker": "DIS",
+
+      "todays_percent_change": -0.36,
+
+      "todays_profit_loss": -1.03,
+
+      "total_percent_change": 19.5,
+
+      "total_profit_loss": 46.4,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/the-walt-disney-company-share-price-dis"
+    },
+
+    {
+      "avg_price": 80.46,
+
+      "company_code": "dummy",
+
+      "current_value": 214.36,
+
+      "invested_amount": 236.56,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 72.91,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/LNTH@2x.jpg",
+
+      "market_cap": "Mid Cap",
+
+      "name": "Lantheus Holdings",
+
+      "quantity": 2.94,
+
+      "sector": "Health Technology",
+
+      "ticker": "LNTH",
+
+      "todays_percent_change": 2.79,
+
+      "todays_profit_loss": 5.82,
+
+      "total_percent_change": -9.39,
+
+      "total_profit_loss": -22.2,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/lantheus-holdings-share-price-lnth"
+    },
+
+    {
+      "avg_price": 70.48,
+
+      "company_code": "dummy",
+
+      "current_value": 252.72,
+
+      "invested_amount": 228.37,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 78.0,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/PYPL@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Paypal Holdings, Inc.",
+
+      "quantity": 3.24,
+
+      "sector": "Technology Services",
+
+      "ticker": "PYPL",
+
+      "todays_percent_change": 0.23,
+
+      "todays_profit_loss": 0.58,
+
+      "total_percent_change": 10.66,
+
+      "total_profit_loss": 24.35,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/paypal-holdings-inc-share-price-pypl"
+    },
+
+    {
+      "avg_price": 2.22,
+
+      "company_code": "dummy",
+
+      "current_value": 0.0,
+
+      "invested_amount": 221.75,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 0.0,
+
+      "market_cap": "Others",
+
+      "name": "HEPA",
+
+      "quantity": 100.0,
+
+      "sector": "Others",
+
+      "ticker": "HEPA",
+
+      "todays_percent_change": 0.0,
+
+      "todays_profit_loss": 0.0,
+
+      "total_percent_change": -100.0,
+
+      "total_profit_loss": -221.75,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/hepion-pharmaceuticals-inc-share-price-hepa"
+    },
+
+    {
+      "avg_price": 12.07,
+
+      "company_code": "dummy",
+
+      "current_value": 195.8,
+
+      "invested_amount": 214.78,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 11.0,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/SITC@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Site Centers Corp.",
+
+      "quantity": 17.8,
+
+      "sector": "Finance",
+
+      "ticker": "SITC",
+
+      "todays_percent_change": -0.09,
+
+      "todays_profit_loss": -0.18,
+
+      "total_percent_change": -8.84,
+
+      "total_profit_loss": -18.98,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/site-centers-corp-share-price-sitc"
+    },
+
+    {
+      "avg_price": 87.07,
+
+      "company_code": "dummy",
+
+      "current_value": 272.64,
+
+      "invested_amount": 213.33,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 111.28,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/MU@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Micron Technology Inc.",
+
+      "quantity": 2.45,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "MU",
+
+      "todays_percent_change": -0.4,
+
+      "todays_profit_loss": -1.09,
+
+      "total_percent_change": 27.8,
+
+      "total_profit_loss": 59.31,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/micron-technology-inc-share-price-mu"
+    },
+
+    {
+      "avg_price": 24.6,
+
+      "company_code": "dummy",
+
+      "current_value": 206.25,
+
+      "invested_amount": 204.42,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 24.82,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/PFE@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Pfizer Inc.",
+
+      "quantity": 8.31,
+
+      "sector": "Health Technology",
+
+      "ticker": "PFE",
+
+      "todays_percent_change": -2.09,
+
+      "todays_profit_loss": -4.4,
+
+      "total_percent_change": 0.9,
+
+      "total_profit_loss": 1.83,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/pfizer-inc-share-price-pfe"
+    },
+
+    {
+      "avg_price": 1.01,
+
+      "company_code": "dummy",
+
+      "current_value": 158.79,
+
+      "invested_amount": 202.28,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 0.79,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/us_stock/49/IVVD.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Invivyd Inc",
+
+      "quantity": 201.0,
+
+      "sector": "Healthcare",
+
+      "ticker": "IVVD",
+
+      "todays_percent_change": -2.47,
+
+      "todays_profit_loss": -4.02,
+
+      "total_percent_change": -21.5,
+
+      "total_profit_loss": -43.49,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/invivyd-inc-share-price-ivvd"
+    },
+
+    {
+      "avg_price": 28.26,
+
+      "company_code": "dummy",
+
+      "current_value": 203.91,
+
+      "invested_amount": 200.95,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 28.68,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/KHC@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Kraft Heinz Company, The",
+
+      "quantity": 7.11,
+
+      "sector": "Consumer Non-Durables",
+
+      "ticker": "KHC",
+
+      "todays_percent_change": -0.35,
+
+      "todays_profit_loss": -0.72,
+
+      "total_percent_change": 1.48,
+
+      "total_profit_loss": 2.96,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/kraft-heinz-company-the-share-price-khc"
+    },
+
+    {
+      "avg_price": 5.66,
+
+      "company_code": "dummy",
+
+      "current_value": 253.83,
+
+      "invested_amount": 200.82,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 7.15,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/SIGA@2x.jpg",
+
+      "market_cap": "Small Cap",
+
+      "name": "Siga Technologies Inc",
+
+      "quantity": 35.5,
+
+      "sector": "Health Technology",
+
+      "ticker": "SIGA",
+
+      "todays_percent_change": 1.27,
+
+      "todays_profit_loss": 3.18,
+
+      "total_percent_change": 26.39,
+
+      "total_profit_loss": 53.01,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/siga-technologies-inc-share-price-siga"
+    },
+
+    {
+      "avg_price": 162.32,
+
+      "company_code": "dummy",
+
+      "current_value": 223.21,
+
+      "invested_amount": 186.67,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 194.1,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/GOOG@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Alphabet Inc. - Class C Shares",
+
+      "quantity": 1.15,
+
+      "sector": "Technology Services",
+
+      "ticker": "GOOG",
+
+      "todays_percent_change": 0.47,
+
+      "todays_profit_loss": 1.04,
+
+      "total_percent_change": 19.58,
+
+      "total_profit_loss": 36.54,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/alphabet-inc-class-c-shares-share-price-goog"
+    },
+
+    {
+      "avg_price": 59.0,
+
+      "company_code": "dummy",
+
+      "current_value": 183.65,
+
+      "invested_amount": 179.35,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 60.41,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/UL@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Unilever Plc",
+
+      "quantity": 3.04,
+
+      "sector": "Consumer Non-Durables",
+
+      "ticker": "UL",
+
+      "todays_percent_change": -1.03,
+
+      "todays_profit_loss": -1.91,
+
+      "total_percent_change": 2.4,
+
+      "total_profit_loss": 4.3,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "ad",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/unilever-plc-share-price-ul"
+    },
+
+    {
+      "avg_price": 91.58,
+
+      "company_code": "dummy",
+
+      "current_value": 233.5,
+
+      "invested_amount": 163.02,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 131.18,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/DELL@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Dell Technologies Inc. - Class C Shares",
+
+      "quantity": 1.78,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "DELL",
+
+      "todays_percent_change": 2.2,
+
+      "todays_profit_loss": 5.03,
+
+      "total_percent_change": 43.23,
+
+      "total_profit_loss": 70.48,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/dell-technologies-inc-class-c-shares-share-price-dell"
+    },
+
+    {
+      "avg_price": 22.53,
+
+      "company_code": "dummy",
+
+      "current_value": 155.56,
+
+      "invested_amount": 148.67,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 23.57,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/SIRI@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Sirius Xm Holdings Inc.",
+
+      "quantity": 6.6,
+
+      "sector": "Consumer Services",
+
+      "ticker": "SIRI",
+
+      "todays_percent_change": -2.48,
+
+      "todays_profit_loss": -3.96,
+
+      "total_percent_change": 4.64,
+
+      "total_profit_loss": 6.89,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/sirius-xm-holdings-inc-share-price-siri"
+    },
+
+    {
+      "avg_price": 390.94,
+
+      "company_code": "dummy",
+
+      "current_value": 179.82,
+
+      "invested_amount": 136.83,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 513.77,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/MSFT@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Microsoft Corporation",
+
+      "quantity": 0.35,
+
+      "sector": "Technology Services",
+
+      "ticker": "MSFT",
+
+      "todays_percent_change": 0.57,
+
+      "todays_profit_loss": 1.02,
+
+      "total_percent_change": 31.42,
+
+      "total_profit_loss": 42.99,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/microsoft-corporation-share-price-msft",
+
+      "eventNudge": {
+        "bgColor": "#E8F4FD",
+
+        "icon": {
+          "png": "https://indcdn.indmoney.com/public/images/bell_dark_icon.png"
+        },
+
+        "text": {
+          "text": "Cybersecurity Alert",
+
+          "color": "#47494C",
+
+          "font": "Caption"
+        },
+
+        "info_bottomsheet": {
+          "title": "Cybersecurity Alert",
+
+          "content_data": [
+            {
+              "description": "<div style=\"font-family:AvenirNext-Medium;font-size:13px;color:#191C1F\"><p><span style=\"color:#191C1F\"></span>Microsoft is investigating a breach linked to Chinese hackers exploiting vulnerabilities in its SharePoint service, affecting over 400 organizations globally.</p>\n</div>"
+            }
+          ]
+        },
+
+        "cta": {
+          "title": {
+            "text": "View",
+
+            "color": "#017AFF",
+
+            "font": "Caption"
+          },
+
+          "type": "bottomsheet",
+
+          "eventName": "nudgeBottomsheet"
+        }
+      }
+    },
+
+    {
+      "avg_price": 32.76,
+
+      "company_code": "dummy",
+
+      "current_value": 150.08,
+
+      "invested_amount": 131.02,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 37.52,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/HRMY@2x.jpg",
+
+      "market_cap": "Mid Cap",
+
+      "name": "Harmony Biosciences Holdings Inc",
+
+      "quantity": 4.0,
+
+      "sector": "Health Technology",
+
+      "ticker": "HRMY",
+
+      "todays_percent_change": 2.21,
+
+      "todays_profit_loss": 3.25,
+
+      "total_percent_change": 14.55,
+
+      "total_profit_loss": 19.06,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/harmony-biosciences-holdings-inc-share-price-hrmy"
+    },
+
+    {
+      "avg_price": 38.69,
+
+      "company_code": "dummy",
+
+      "current_value": 134.09,
+
+      "invested_amount": 111.03,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 46.72,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/us_stock/49/BSVN.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Bank7 Corp",
+
+      "quantity": 2.87,
+
+      "sector": "Finance",
+
+      "ticker": "BSVN",
+
+      "todays_percent_change": -0.89,
+
+      "todays_profit_loss": -1.2,
+
+      "total_percent_change": 20.77,
+
+      "total_profit_loss": 23.06,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/bank7-corp-share-price-bsvn"
+    },
+
+    {
+      "avg_price": 41.88,
+
+      "company_code": "dummy",
+
+      "current_value": 128.42,
+
+      "invested_amount": 110.97,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 48.46,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/BAC@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Bank Of America Corp.",
+
+      "quantity": 2.65,
+
+      "sector": "Finance",
+
+      "ticker": "BAC",
+
+      "todays_percent_change": 0.14,
+
+      "todays_profit_loss": 0.18,
+
+      "total_percent_change": 15.72,
+
+      "total_profit_loss": 17.45,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/bank-of-america-corp-share-price-bac"
+    },
+
+    {
+      "avg_price": 34.6,
+
+      "company_code": "dummy",
+
+      "current_value": 101.41,
+
+      "invested_amount": 104.16,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 33.69,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/CMCSA@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Comcast Corp.",
+
+      "quantity": 3.01,
+
+      "sector": "Consumer Services",
+
+      "ticker": "CMCSA",
+
+      "todays_percent_change": -4.75,
+
+      "todays_profit_loss": -5.06,
+
+      "total_percent_change": -2.64,
+
+      "total_profit_loss": -2.75,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/comcast-corp-share-price-cmcsa"
+    },
+
+    {
+      "avg_price": 41.8,
+
+      "company_code": "dummy",
+
+      "current_value": 109.59,
+
+      "invested_amount": 102.41,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 44.73,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/OXY@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Occidental Petroleum Corporation",
+
+      "quantity": 2.45,
+
+      "sector": "Energy Minerals",
+
+      "ticker": "OXY",
+
+      "todays_percent_change": 0.22,
+
+      "todays_profit_loss": 0.24,
+
+      "total_percent_change": 7.01,
+
+      "total_profit_loss": 7.18,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/occidental-petroleum-corporation-share-price-oxy"
+    },
+
+    {
+      "avg_price": 115.02,
+
+      "company_code": "dummy",
+
+      "current_value": 117.01,
+
+      "invested_amount": 100.07,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 134.49,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/AMR@2x.jpg",
+
+      "market_cap": "Mid Cap",
+
+      "name": "Alpha Metallurgical Resource",
+
+      "quantity": 0.87,
+
+      "sector": "Energy Minerals",
+
+      "ticker": "AMR",
+
+      "todays_percent_change": -2.61,
+
+      "todays_profit_loss": -3.14,
+
+      "total_percent_change": 16.92,
+
+      "total_profit_loss": 16.94,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/alpha-metallurgical-resource-share-price-amr"
+    },
+
+    {
+      "avg_price": 5.03,
+
+      "company_code": "dummy",
+
+      "current_value": 150.15,
+
+      "invested_amount": 88.09,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 8.58,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/us_stock/49/ULBI.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Ultralife Corp",
+
+      "quantity": 17.5,
+
+      "sector": "Producer Manufacturing",
+
+      "ticker": "ULBI",
+
+      "todays_percent_change": -1.94,
+
+      "todays_profit_loss": -2.97,
+
+      "total_percent_change": 70.45,
+
+      "total_profit_loss": 62.06,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/ultralife-corp-share-price-ulbi"
+    },
+
+    {
+      "avg_price": 61.92,
+
+      "company_code": "dummy",
+
+      "current_value": 93.61,
+
+      "invested_amount": 81.73,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 70.92,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/APTV@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Aptiv Plc",
+
+      "quantity": 1.32,
+
+      "sector": "Producer Manufacturing",
+
+      "ticker": "APTV",
+
+      "todays_percent_change": 0.65,
+
+      "todays_profit_loss": 0.6,
+
+      "total_percent_change": 14.54,
+
+      "total_profit_loss": 11.88,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/aptiv-plc-share-price-aptv"
+    },
+
+    {
+      "avg_price": 182.88,
+
+      "company_code": "dummy",
+
+      "current_value": 96.0,
+
+      "invested_amount": 78.64,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 223.26,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/NXPI@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Nxp Semiconductors Nv",
+
+      "quantity": 0.43,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "NXPI",
+
+      "todays_percent_change": -0.52,
+
+      "todays_profit_loss": -0.5,
+
+      "total_percent_change": 22.08,
+
+      "total_profit_loss": 17.36,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/nxp-semiconductors-nv-share-price-nxpi"
+    },
+
+    {
+      "avg_price": 4.21,
+
+      "company_code": "dummy",
+
+      "current_value": 82.06,
+
+      "invested_amount": 75.01,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 4.61,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/us_stock/49/OPHC.png",
+
+      "market_cap": "Small Cap",
+
+      "name": "Optimumbank Holdings Inc",
+
+      "quantity": 17.8,
+
+      "sector": "Finance",
+
+      "ticker": "OPHC",
+
+      "todays_percent_change": -1.07,
+
+      "todays_profit_loss": -0.89,
+
+      "total_percent_change": 9.4,
+
+      "total_profit_loss": 7.05,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/optimumbank-holdings-inc-share-price-ophc"
+    },
+
+    {
+      "avg_price": 412.92,
+
+      "company_code": "dummy",
+
+      "current_value": 68.89,
+
+      "invested_amount": 59.46,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 478.4,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/TMO@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Thermo Fisher Scientific, Inc.",
+
+      "quantity": 0.144,
+
+      "sector": "Health Technology",
+
+      "ticker": "TMO",
+
+      "todays_percent_change": 0.71,
+
+      "todays_profit_loss": 0.49,
+
+      "total_percent_change": 15.86,
+
+      "total_profit_loss": 9.43,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/thermo-fisher-scientific-inc-share-price-tmo"
+    },
+
+    {
+      "avg_price": 159.22,
+
+      "company_code": "dummy",
+
+      "current_value": 71.72,
+
+      "invested_amount": 57.32,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 199.22,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/IQV@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Iqvia Holdings Inc.",
+
+      "quantity": 0.36,
+
+      "sector": "Health Services",
+
+      "ticker": "IQV",
+
+      "todays_percent_change": -0.8,
+
+      "todays_profit_loss": -0.58,
+
+      "total_percent_change": 25.12,
+
+      "total_profit_loss": 14.4,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/iqvia-holdings-inc-share-price-iqv"
+    },
+
+    {
+      "avg_price": 67.1,
+
+      "company_code": "dummy",
+
+      "current_value": 58.59,
+
+      "invested_amount": 55.69,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 70.59,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/MDLZ@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Mondelez International, Inc.",
+
+      "quantity": 0.83,
+
+      "sector": "Consumer Non-Durables",
+
+      "ticker": "MDLZ",
+
+      "todays_percent_change": 0.58,
+
+      "todays_profit_loss": 0.34,
+
+      "total_percent_change": 5.21,
+
+      "total_profit_loss": 2.9,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/mondelez-international-inc-share-price-mdlz"
+    },
+
+    {
+      "avg_price": 139.5,
+
+      "company_code": "dummy",
+
+      "current_value": 57.03,
+
+      "invested_amount": 50.22,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 158.41,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/QCOM@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Qualcomm Incorporated",
+
+      "quantity": 0.36,
+
+      "sector": "Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing",
+
+      "ticker": "QCOM",
+
+      "todays_percent_change": -0.27,
+
+      "todays_profit_loss": -0.15,
+
+      "total_percent_change": 13.56,
+
+      "total_profit_loss": 6.81,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/qualcomm-incorporated-share-price-qcom"
+    },
+
+    {
+      "avg_price": 179.58,
+
+      "company_code": "dummy",
+
+      "current_value": 43.98,
+
+      "invested_amount": 34.12,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 231.48,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/AMZN@2x.jpg",
+
+      "market_cap": "Mega Cap",
+
+      "name": "Amazon.com Inc.",
+
+      "quantity": 0.19,
+
+      "sector": "Retail Trade",
+
+      "ticker": "AMZN",
+
+      "todays_percent_change": -0.32,
+
+      "todays_profit_loss": -0.14,
+
+      "total_percent_change": 28.9,
+
+      "total_profit_loss": 9.86,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/amazon-com-inc-share-price-amzn",
+
+      "eventNudge": {
+        "bgColor": "#E8F4FD",
+
+        "icon": {
+          "png": "https://indcdn.indmoney.com/public/images/bell_dark_icon.png"
+        },
+
+        "text": {
+          "text": "Market Position Alert",
+
+          "color": "#47494C",
+
+          "font": "Caption"
+        },
+
+        "info_bottomsheet": {
+          "title": "Market Position Alert",
+
+          "content_data": [
+            {
+              "description": "<div style=\"font-family:AvenirNext-Medium;font-size:13px;color:#191C1F\"><p><span style=\"color:#191C1F\"></span>Amazon's AWS division holds a 30% global market share, positioning the company to capitalize on growth in cloud computing and eCommerce.</p>\n</div>"
+            }
+          ]
+        },
+
+        "cta": {
+          "title": {
+            "text": "View",
+
+            "color": "#017AFF",
+
+            "font": "Caption"
+          },
+
+          "type": "bottomsheet",
+
+          "eventName": "nudgeBottomsheet"
+        }
+      }
+    },
+
+    {
+      "avg_price": 196.27,
+
+      "company_code": "dummy",
+
+      "current_value": 29.12,
+
+      "invested_amount": 21.59,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 264.73,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/HII@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Huntington Ingalls Industries, Inc.",
+
+      "quantity": 0.11,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "HII",
+
+      "todays_percent_change": 0.53,
+
+      "todays_profit_loss": 0.15,
+
+      "total_percent_change": 34.88,
+
+      "total_profit_loss": 7.53,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/huntington-ingalls-industries-inc-share-price-hii"
+    },
+
+    {
+      "avg_price": 26.76,
+
+      "company_code": "dummy",
+
+      "current_value": 26.5,
+
+      "invested_amount": 21.41,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 33.12,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/HMC@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "Honda Motor Co., Ltd.",
+
+      "quantity": 0.8,
+
+      "sector": "Consumer Durables",
+
+      "ticker": "HMC",
+
+      "todays_percent_change": -1.4,
+
+      "todays_profit_loss": -0.38,
+
+      "total_percent_change": 23.76,
+
+      "total_profit_loss": 5.09,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "ad",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/honda-motor-co-ltd-share-price-hmc"
+    },
+
+    {
+      "avg_price": 43.71,
+
+      "company_code": "dummy",
+
+      "current_value": 18.7,
+
+      "invested_amount": 15.3,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 53.42,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/GM@2x.jpg",
+
+      "market_cap": "Large Cap",
+
+      "name": "General Motors Co.",
+
+      "quantity": 0.35,
+
+      "sector": "Consumer Durables",
+
+      "ticker": "GM",
+
+      "todays_percent_change": 2.06,
+
+      "todays_profit_loss": 0.38,
+
+      "total_percent_change": 22.2,
+
+      "total_profit_loss": 3.4,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/general-motors-co-share-price-gm"
+    },
+
+    {
+      "avg_price": 43.45,
+
+      "company_code": "dummy",
+
+      "current_value": 14.69,
+
+      "invested_amount": 8.69,
+
+      "is_buy_allowed": true,
+
+      "is_sell_allowed": true,
+
+      "last_updated_on": 1753552644,
+
+      "live_price": 73.45,
+
+      "logo": "https://indcdn.indmoney.com/cdn-cgi/image/quality=80,format=webp,metadata=copyright,width=100/https://indcdn.indmoney.com/public/images/usstocks/US-STOCKS-2X/ACLS@2x.jpg",
+
+      "market_cap": "Mid Cap",
+
+      "name": "Axcelis Technologies Inc",
+
+      "quantity": 0.2,
+
+      "sector": "Electronic Technology",
+
+      "ticker": "ACLS",
+
+      "todays_percent_change": 0.82,
+
+      "todays_profit_loss": 0.12,
+
+      "total_percent_change": 69.04,
+
+      "total_profit_loss": 6.0,
+
+      "gfv_buy_limit": 0.0,
+
+      "gfv_sell_flag": false,
+
+      "instrument_type": "cs",
+
+      "account_no": "WRBV001202",
+
+      "is_bookmarked": false,
+
+      "bookmark_cta": {
+        "add": {
+          "eventName": "us_mini_internal_stock_addwatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        },
+
+        "remove": {
+          "eventName": "us_mini_internal_stock_removewatchlist",
+
+          "type": "nav",
+
+          "request": {
+            "navlink": {
+              "ios": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id=",
+
+              "android": "https://www.indmoney.com/widget/bottomsheet?page=watchlist&watchlist_id="
+            }
+          }
+        }
+      },
+
+      "slug_navlink": "/us-stocks/axcelis-technologies-inc-share-price-acls"
+    }
+  ]
+}
