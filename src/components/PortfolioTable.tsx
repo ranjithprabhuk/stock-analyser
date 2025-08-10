@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -121,6 +121,12 @@ export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
 
   const handleCopyAnalysisPrompt = async (stock: StockHolding) => {
     const analysisPrompt = `${stock.name} ${stock.ticker}
+
+Current Holdings:
+- Quantity: ${stock.quantity}
+- Average Price: ${formatCurrency(stock.avg_price)}
+- Invested Amount: ${formatCurrency(stock.invested_amount)}
+
 Analyze the stock and provide a detailed long-term investment recommendation: Strong Buy, Buy, Hold, Sell or Strong Sell.
 Your analysis should include the following sections:
 Company Overview
@@ -159,6 +165,47 @@ Promoter & Management Integrity
       console.error('Failed to copy text: ', err);
     }
   };
+
+  const handleRatingChange = useCallback(
+    (ticker: string, ratingType: keyof StockRatings[string], value: RatingValue) => {
+      const updatedRatings = {
+        ...stockRatings,
+        [ticker]: {
+          ...stockRatings[ticker],
+          [ratingType]: value,
+        },
+      };
+      setStockRatings(updatedRatings);
+      localStorage.setItem('stockRatings', JSON.stringify(updatedRatings));
+    },
+    [stockRatings]
+  );
+
+  const RatingSelector = useCallback(
+    ({ ticker, ratingType }: { ticker: string; ratingType: keyof StockRatings[string] }) => {
+      const currentRating = stockRatings[ticker]?.[ratingType] || '';
+      return (
+        <FormControl size="small" sx={{ minWidth: 120 }}>
+          <Select
+            value={currentRating}
+            onChange={(e) => handleRatingChange(ticker, ratingType, e.target.value as RatingValue)}
+            displayEmpty
+            sx={{ fontSize: '0.875rem' }}
+          >
+            <MenuItem value="">
+              <em>Not Set</em>
+            </MenuItem>
+            {Object.values(Rating).map((rating) => (
+              <MenuItem key={rating} value={rating}>
+                {rating}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      );
+    },
+    [stockRatings, handleRatingChange]
+  );
 
   const columns = useMemo<ColumnDef<StockHolding>[]>(
     () => [
@@ -284,7 +331,7 @@ Promoter & Management Integrity
       //   size: 120,
       // },
     ],
-    []
+    [stockRatings, handleCopyAnalysisPrompt, RatingSelector]
   );
 
   const table = useReactTable({
@@ -336,42 +383,6 @@ Promoter & Management Integrity
 
   const handleCloseSnackbar = () => {
     setCopySnackbarOpen(false);
-  };
-
-  const handleRatingChange = (ticker: string, ratingType: keyof StockRatings[string], value: RatingValue) => {
-    const updatedRatings = {
-      ...stockRatings,
-      [ticker]: {
-        ...stockRatings[ticker],
-        [ratingType]: value,
-      },
-    };
-    setStockRatings(updatedRatings);
-    localStorage.setItem('stockRatings', JSON.stringify(updatedRatings));
-  };
-
-  const RatingSelector = ({ ticker, ratingType }: { ticker: string; ratingType: keyof StockRatings[string] }) => {
-    const currentRating = stockRatings[ticker]?.[ratingType] || '';
-
-    return (
-      <FormControl size="small" sx={{ minWidth: 120 }}>
-        <Select
-          value={currentRating}
-          onChange={(e) => handleRatingChange(ticker, ratingType, e.target.value as RatingValue)}
-          displayEmpty
-          sx={{ fontSize: '0.875rem' }}
-        >
-          <MenuItem value="">
-            <em>Not Set</em>
-          </MenuItem>
-          {Object.values(Rating).map((rating) => (
-            <MenuItem key={rating} value={rating}>
-              {rating}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    );
   };
 
   if (loading) {

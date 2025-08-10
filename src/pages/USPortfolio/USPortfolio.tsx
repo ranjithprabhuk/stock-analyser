@@ -14,7 +14,7 @@ interface SamplePortfolioData {
 const samplePortfolio = (samplePortfolioData as unknown as SamplePortfolioData).data;
 
 const USPortfolio = () => {
-  const [portfolioData, setPortfolioData] = useState<StockHolding[]>([]);
+  const [portfolioData, setPortfolioData] = useState<StockHolding[]>(samplePortfolio);
   const [loading, setLoading] = useState<boolean>(false);
   const [apiLoading, setApiLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
