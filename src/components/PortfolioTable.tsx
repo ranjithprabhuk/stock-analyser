@@ -17,7 +17,6 @@ import {
   Paper,
   TablePagination,
   IconButton,
-  Button,
   Box,
   Typography,
   Tooltip,
@@ -30,6 +29,7 @@ import {
   Alert,
   Select,
   FormControl,
+  TextField,
   // Switch,
 } from '@mui/material';
 import ViewColumnIcon from '@mui/icons-material/ViewColumn';
@@ -52,7 +52,7 @@ interface StockRatings {
     gemini_rating?: RatingValue;
     perplexity_rating?: RatingValue;
     alpha_spread_rating?: RatingValue;
-    custom_rating?: RatingValue;
+    notes?: string;
   };
 }
 
@@ -221,6 +221,21 @@ Promoter & Management Integrity
     [stockRatings]
   );
 
+  const handleNotesChange = useCallback(
+    (ticker: string, notes: string) => {
+      const updatedRatings = {
+        ...stockRatings,
+        [ticker]: {
+          ...stockRatings[ticker],
+          notes: notes,
+        },
+      };
+      setStockRatings(updatedRatings);
+      localStorage.setItem('stockRatings', JSON.stringify(updatedRatings));
+    },
+    [stockRatings]
+  );
+
   const RatingSelector = useCallback(
     ({ ticker, ratingType }: { ticker: string; ratingType: keyof StockRatings[string] }) => {
       const currentRating = stockRatings[ticker]?.[ratingType] || '';
@@ -245,6 +260,25 @@ Promoter & Management Integrity
       );
     },
     [stockRatings, handleRatingChange]
+  );
+
+  const NotesInput = useCallback(
+    ({ ticker }: { ticker: string }) => {
+      const currentNotes = stockRatings[ticker]?.notes || '';
+      return (
+        <TextField
+          multiline
+          rows={2}
+          value={currentNotes}
+          onChange={(e) => handleNotesChange(ticker, e.target.value)}
+          placeholder="Add notes..."
+          size="small"
+          sx={{ minWidth: 150, maxWidth: 200 }}
+          variant="outlined"
+        />
+      );
+    },
+    [stockRatings, handleNotesChange]
   );
 
   const columns = useMemo<ColumnDef<StockHolding>[]>(
@@ -343,10 +377,10 @@ Promoter & Management Integrity
         size: 160,
       },
       {
-        id: 'custom_rating',
-        header: 'Custom Rating',
-        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="custom_rating" />,
-        size: 140,
+        id: 'notes',
+        header: 'Notes',
+        cell: ({ row }) => <NotesInput ticker={row.original.ticker} />,
+        size: 200,
       },
       {
         id: 'copy',
