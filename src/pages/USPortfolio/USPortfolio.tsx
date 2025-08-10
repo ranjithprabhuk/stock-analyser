@@ -35,8 +35,8 @@ const USPortfolio = () => {
     } catch (error) {
       console.error('Error parsing file:', error);
       setError(
-        error instanceof Error 
-          ? error.message 
+        error instanceof Error
+          ? error.message
           : 'Failed to parse the uploaded file. Please ensure it is a valid JSON file.'
       );
     } finally {
@@ -57,8 +57,8 @@ const USPortfolio = () => {
     } catch (err) {
       console.error('Error fetching from IndMoney:', err);
       setError(
-        err instanceof Error 
-          ? err.message 
+        err instanceof Error
+          ? err.message
           : 'Failed to fetch data from IndMoney. Please check your connection and try again.'
       );
     } finally {
@@ -83,18 +83,14 @@ const USPortfolio = () => {
           <Typography variant="body1" color="text.secondary">
             or
           </Typography>
-          <Button 
-            variant="outlined" 
-            onClick={() => setPortfolioData(samplePortfolio)}
-            disabled={loading || apiLoading}
-          >
+          <Button variant="outlined" onClick={() => setPortfolioData(samplePortfolio)} disabled={loading || apiLoading}>
             Load Sample Portfolio
           </Button>
           <Typography variant="body1" color="text.secondary">
             or
           </Typography>
-          <Button 
-            variant="contained" 
+          <Button
+            variant="contained"
             color="primary"
             onClick={handleFetchFromIndMoney}
             disabled={loading || apiLoading}
@@ -110,10 +106,7 @@ const USPortfolio = () => {
         )}
       </Box>
 
-      <PortfolioTable 
-        data={portfolioData} 
-        loading={loading} 
-      />
+      <PortfolioTable data={portfolioData} loading={loading} />
     </Box>
   );
 };

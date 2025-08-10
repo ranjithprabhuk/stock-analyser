@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -78,46 +78,86 @@ const formatPercentage = (value: number) => {
   }).format(value / 100);
 };
 
+// Helper function to load settings from localStorage
+const loadSettingsFromStorage = () => {
+  try {
+    const savedSettings = localStorage.getItem('portfolioTableSettings');
+    if (savedSettings) {
+      const { visibility, order, sizing } = JSON.parse(savedSettings);
+      console.log('Initial load of settings:', { visibility, order, sizing });
+      return {
+        visibility: visibility || {},
+        order: order || [],
+        sizing: sizing || {},
+      };
+    }
+  } catch (error) {
+    console.error('Error loading settings from localStorage:', error);
+    localStorage.removeItem('portfolioTableSettings');
+  }
+  console.log('No saved settings found, using defaults');
+  return {
+    visibility: {},
+    order: [],
+    sizing: {},
+  };
+};
+
 export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
+  const initialSettings = loadSettingsFromStorage();
+
   const [sorting, setSorting] = useState<{ id: string; desc: boolean }[]>([]);
-  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
-  const [columnOrder, setColumnOrder] = useState<string[]>([]);
-  const [columnSizing, setColumnSizing] = useState<Record<string, number>>({});
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(initialSettings.visibility);
+  const [columnOrder, setColumnOrder] = useState<string[]>(initialSettings.order);
+  const [columnSizing, setColumnSizing] = useState<Record<string, number>>(initialSettings.sizing);
   const [selectedStock, setSelectedStock] = useState<StockHolding | null>(null);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [pagination, setPagination] = useState({
     pageIndex: 0,
-    pageSize: 10,
+    pageSize: 50,
   });
   const [copySnackbarOpen, setCopySnackbarOpen] = useState(false);
   const [stockRatings, setStockRatings] = useState<StockRatings>({});
+  const [isInitialized, setIsInitialized] = useState(false);
+  const hasLoadedSettings = useRef(false);
 
-  // Load saved table settings from localStorage
+  // Load saved ratings and set initialization
   useEffect(() => {
-    const savedSettings = localStorage.getItem('portfolioTableSettings');
-    if (savedSettings) {
-      const { visibility, order, sizing } = JSON.parse(savedSettings);
-      setColumnVisibility(visibility || {});
-      setColumnOrder(order || []);
-      setColumnSizing(sizing || {});
-    }
+    if (hasLoadedSettings.current) return;
 
-    // Load saved ratings from localStorage
-    const savedRatings = localStorage.getItem('stockRatings');
-    if (savedRatings) {
-      setStockRatings(JSON.parse(savedRatings));
+    try {
+      // Load saved ratings from localStorage
+      const savedRatings = localStorage.getItem('stockRatings');
+      if (savedRatings) {
+        const ratings = JSON.parse(savedRatings);
+        setStockRatings(ratings);
+      }
+    } catch (error) {
+      console.error('Error loading ratings from localStorage:', error);
+      localStorage.removeItem('stockRatings');
+    } finally {
+      hasLoadedSettings.current = true;
+      // Mark as initialized immediately since table settings are loaded in initial state
+      setIsInitialized(true);
     }
   }, []);
 
-  // Save table settings to localStorage when they change
+  // Save table settings to localStorage when they change (only after initial load)
   useEffect(() => {
-    const settings = {
-      visibility: columnVisibility,
-      order: columnOrder,
-      sizing: columnSizing,
-    };
-    localStorage.setItem('portfolioTableSettings', JSON.stringify(settings));
-  }, [columnVisibility, columnOrder, columnSizing]);
+    if (!isInitialized) return;
+
+    try {
+      const settings = {
+        visibility: columnVisibility,
+        order: columnOrder,
+        sizing: columnSizing,
+      };
+      console.log('Saving settings:', settings);
+      localStorage.setItem('portfolioTableSettings', JSON.stringify(settings));
+    } catch (error) {
+      console.error('Error saving settings to localStorage:', error);
+    }
+  }, [columnVisibility, columnOrder, columnSizing, isInitialized]);
 
   const handleCopyAnalysisPrompt = async (stock: StockHolding) => {
     const analysisPrompt = `${stock.name} ${stock.ticker}
