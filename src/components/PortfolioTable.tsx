@@ -334,6 +334,7 @@ Promoter & Management Integrity
         header: 'Notes',
         cell: ({ row }) => (
           <NotesInput
+            key={`notes-${row.original.ticker}`}
             ticker={row.original.ticker}
             initialValue={stockRatings[row.original.ticker]?.notes || ''}
             onNotesChange={handleNotesChange}

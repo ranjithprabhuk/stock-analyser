@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useRef, memo } from 'react';
 import { TextField } from '@mui/material';
 
 interface NotesInputProps {
@@ -7,7 +7,7 @@ interface NotesInputProps {
   onNotesChange: (ticker: string, notes: string) => void;
 }
 
-export const NotesInput = ({ ticker, initialValue, onNotesChange }: NotesInputProps) => {
+export const NotesInput = memo(({ ticker, initialValue, onNotesChange }: NotesInputProps) => {
   const [localValue, setLocalValue] = useState(initialValue);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -24,7 +24,7 @@ export const NotesInput = ({ ticker, initialValue, onNotesChange }: NotesInputPr
       }
       timeoutRef.current = setTimeout(() => {
         onNotesChange(ticker, value);
-      }, 500); // 500ms debounce
+      }, 5000); // 500ms debounce
     },
     [ticker, onNotesChange]
   );
@@ -59,6 +59,6 @@ export const NotesInput = ({ ticker, initialValue, onNotesChange }: NotesInputPr
       variant="outlined"
     />
   );
-};
+});
 
 NotesInput.displayName = 'NotesInput';

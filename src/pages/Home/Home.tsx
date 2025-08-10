@@ -39,11 +39,11 @@ const Home = () => {
       </Box>
 
       <Container maxWidth="lg">
-        <Box 
-          sx={{ 
-            display: 'grid', 
-            gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, 
-            gap: 4 
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+            gap: 4,
           }}
         >
           <Box>

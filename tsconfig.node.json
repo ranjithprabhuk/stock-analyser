@@ -19,7 +19,7 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    
+
     /* Additional module resolution settings */
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
