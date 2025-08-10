@@ -8,6 +8,9 @@ import IndianPortfolio from './pages/IndianPortfolio';
 import Screener from './pages/Screener';
 import About from './pages/About';
 
+// GitHub Pages support for SPA routing
+const basename = import.meta.env.DEV ? '' : '/stock-analyser';
+
 const theme = createTheme({
   palette: {
     mode: 'light',
@@ -62,7 +65,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
+      <Router basename={basename}>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />

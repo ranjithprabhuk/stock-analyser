@@ -19,9 +19,6 @@ interface RatingSelectorProps {
 }
 
 const RatingSelectorComponent = ({ ticker, ratingType, currentValue, onRatingChange }: RatingSelectorProps) => {
-  // Debug logging to track value changes
-  console.log(`RatingSelector ${ticker}-${ratingType}: currentValue =`, currentValue);
-
   const handleChange = useCallback(
     (event: any) => {
       const value = event.target.value as RatingValue;

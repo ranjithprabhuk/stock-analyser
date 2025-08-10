@@ -35,7 +35,6 @@ export const StockAnalysisModal = ({ open, onClose, stock }: StockAnalysisModalP
       try {
         // In a real app, you would use the analysis prompt with the Gemini API
         // For now, we'll just simulate a response
-        console.log(`Analyzing stock: ${stock.ticker} (${stock.name})`);
 
         // In a real app, you would call your backend API here
         // const response = await axios.post('/api/analyze', { prompt });

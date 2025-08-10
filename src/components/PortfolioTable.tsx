@@ -75,7 +75,6 @@ const loadSettingsFromStorage = () => {
     const savedSettings = localStorage.getItem('portfolioTableSettings');
     if (savedSettings) {
       const { visibility, order, sizing } = JSON.parse(savedSettings);
-      console.log('Initial load of settings:', { visibility, order, sizing });
       return {
         visibility: visibility || {},
         order: order || [],
@@ -86,7 +85,6 @@ const loadSettingsFromStorage = () => {
     console.error('Error loading settings from localStorage:', error);
     localStorage.removeItem('portfolioTableSettings');
   }
-  console.log('No saved settings found, using defaults');
   return {
     visibility: {},
     order: [],
@@ -100,14 +98,12 @@ const loadRatingsFromStorage = (): StockRatings => {
     const savedRatings = localStorage.getItem('stockRatings');
     if (savedRatings) {
       const ratings = JSON.parse(savedRatings);
-      console.log('Initial load of ratings:', ratings);
       return ratings;
     }
   } catch (error) {
     console.error('Error loading ratings from localStorage:', error);
     localStorage.removeItem('stockRatings');
   }
-  console.log('No saved ratings found, using defaults');
   return {};
 };
 
@@ -128,11 +124,6 @@ export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
   const [copySnackbarOpen, setCopySnackbarOpen] = useState(false);
   const [stockRatings, setStockRatings] = useState<StockRatings>(initialRatings);
 
-  // Debug effect to track stockRatings changes
-  useEffect(() => {
-    console.log('stockRatings state updated:', stockRatings);
-  }, [stockRatings]);
-
   // Save table settings to localStorage when they change
   useEffect(() => {
     try {
@@ -141,7 +132,6 @@ export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
         order: columnOrder,
         sizing: columnSizing,
       };
-      console.log('Saving settings:', settings);
       localStorage.setItem('portfolioTableSettings', JSON.stringify(settings));
     } catch (error) {
       console.error('Error saving settings to localStorage:', error);
@@ -196,7 +186,6 @@ Promoter & Management Integrity
   };
 
   const handleRatingChange = useCallback((ticker: string, ratingType: string, value: RatingValue) => {
-    console.log(`Rating change: ${ticker} - ${ratingType} = ${value}`);
     setStockRatings((prevRatings) => {
       const updatedRatings = {
         ...prevRatings,
@@ -205,14 +194,12 @@ Promoter & Management Integrity
           [ratingType]: value,
         },
       };
-      console.log('Updated ratings:', updatedRatings);
       localStorage.setItem('stockRatings', JSON.stringify(updatedRatings));
       return updatedRatings;
     });
   }, []);
 
   const handleNotesChange = useCallback((ticker: string, notes: string) => {
-    console.log(`Notes change: ${ticker} = ${notes}`);
     setStockRatings((prevRatings) => {
       const updatedRatings = {
         ...prevRatings,
@@ -227,7 +214,6 @@ Promoter & Management Integrity
   }, []);
 
   const columns = useMemo<ColumnDef<StockHolding>[]>(() => {
-    console.log('Creating columns with stockRatings:', stockRatings);
     return [
       {
         accessorKey: 'logo',

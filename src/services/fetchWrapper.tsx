@@ -1,14 +1,12 @@
 export async function fetchWrapper(requestUrl: RequestInfo | URL, request?: RequestInit): Promise<any> {
   return await fetch(requestUrl, request)
-    .then(response => {
+    .then((response) => {
       return response.json();
     })
-    .then(data => {
-      // console.log('data', data);
+    .then((data) => {
       return data;
     })
-    .catch(err => {
-      console.log('errr', err);
+    .catch((err) => {
       return err;
     });
 }

@@ -1,14 +1,42 @@
-# React + TypeScript + Vite
+# Stock Analyser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive portfolio management application built with React, TypeScript, and Vite. Analyze your stock holdings with advanced filtering, sorting, and AI-powered insights.
 
-Currently, two official plugins are available:
+## Features
 
 - **Portfolio Upload**: Upload your portfolio in JSON format
 - **Interactive Table**: Sort, filter, and customize the view of your holdings
 - **Stock Analysis**: Get AI-powered analysis for individual stocks
+- **Rating System**: Rate stocks with color-coded indicators (Strong Buy, Buy, Hold, Sell, Strong Sell)
+- **Notes System**: Add personal notes to each stock
 - **Responsive Design**: Works on both desktop and mobile devices
-- **Local Storage**: Your table preferences are saved between sessions
+- **Local Storage**: Your table preferences and ratings are saved between sessions
+
+## Live Demo
+
+🚀 **[View Live Application](https://ranjithprabhuk.github.io/stock-analyser/)**
+
+## Deployment
+
+This application is automatically deployed to GitHub Pages using GitHub Actions.
+
+### Automatic Deployment
+
+Every push to the `main` branch triggers an automatic deployment:
+
+1. The GitHub Actions workflow builds the application
+2. Deploys the built files to GitHub Pages
+3. The site is available at: `https://ranjithprabhuk.github.io/stock-analyser/`
+
+### Manual Deployment
+
+You can also deploy manually using:
+
+```bash
+npm run deploy
+```
+
+This will build the application and deploy it to the `gh-pages` branch.
 
 ## Getting Started
 
@@ -20,17 +48,20 @@ Currently, two official plugins are available:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/stock-analyser.git
    cd stock-analyser
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -96,15 +127,15 @@ export default tseslint.config([
       // other options...
     },
   },
-])
+]);
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
 
 export default tseslint.config([
   globalIgnores(['dist']),
@@ -125,5 +156,5 @@ export default tseslint.config([
       // other options...
     },
   },
-])
+]);
 ```

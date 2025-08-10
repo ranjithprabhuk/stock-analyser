@@ -11,7 +11,9 @@
     "start": "vite",
     "server": "tsx server.ts",
     "dev:server": "nodemon --watch server.ts --exec tsx server.ts",
-    "dev:all": "vite"
+    "dev:all": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
