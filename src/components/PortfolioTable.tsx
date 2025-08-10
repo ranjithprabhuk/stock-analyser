@@ -1,19 +1,10 @@
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import {
-  useReactTable,
-  getCoreRowModel,
-  getSortedRowModel,
-  getPaginationRowModel,
-  flexRender,
-} from '@tanstack/react-table';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useReactTable, getCoreRowModel, getSortedRowModel, getPaginationRowModel } from '@tanstack/react-table';
 import type { ColumnDef, VisibilityState } from '@tanstack/react-table';
 import {
   Table,
   TableBody,
-  TableCell,
   TableContainer,
-  TableHead,
-  TableRow,
   Paper,
   TablePagination,
   IconButton,
@@ -27,15 +18,15 @@ import {
   CircularProgress,
   Snackbar,
   Alert,
-  Select,
-  FormControl,
-  TextField,
-  // Switch,
 } from '@mui/material';
 import ViewColumnIcon from '@mui/icons-material/ViewColumn';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import type { StockHolding } from '../types/portfolio';
 import { StockAnalysisModal } from './StockAnalysisModal';
+import { NotesInput } from './NotesInput';
+import { RatingSelector } from './RatingSelector';
+import { PortfolioTableHeader } from './PortfolioTableHeader';
+import { PortfolioTableRow } from './PortfolioTableRow';
 
 const Rating = {
   STRONG_BUY: 'Strong Buy',
@@ -103,8 +94,26 @@ const loadSettingsFromStorage = () => {
   };
 };
 
+// Helper function to load ratings from localStorage
+const loadRatingsFromStorage = (): StockRatings => {
+  try {
+    const savedRatings = localStorage.getItem('stockRatings');
+    if (savedRatings) {
+      const ratings = JSON.parse(savedRatings);
+      console.log('Initial load of ratings:', ratings);
+      return ratings;
+    }
+  } catch (error) {
+    console.error('Error loading ratings from localStorage:', error);
+    localStorage.removeItem('stockRatings');
+  }
+  console.log('No saved ratings found, using defaults');
+  return {};
+};
+
 export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
   const initialSettings = loadSettingsFromStorage();
+  const initialRatings = loadRatingsFromStorage();
 
   const [sorting, setSorting] = useState<{ id: string; desc: boolean }[]>([]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(initialSettings.visibility);
@@ -117,35 +126,15 @@ export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
     pageSize: 50,
   });
   const [copySnackbarOpen, setCopySnackbarOpen] = useState(false);
-  const [stockRatings, setStockRatings] = useState<StockRatings>({});
-  const [isInitialized, setIsInitialized] = useState(false);
-  const hasLoadedSettings = useRef(false);
+  const [stockRatings, setStockRatings] = useState<StockRatings>(initialRatings);
 
-  // Load saved ratings and set initialization
+  // Debug effect to track stockRatings changes
   useEffect(() => {
-    if (hasLoadedSettings.current) return;
+    console.log('stockRatings state updated:', stockRatings);
+  }, [stockRatings]);
 
-    try {
-      // Load saved ratings from localStorage
-      const savedRatings = localStorage.getItem('stockRatings');
-      if (savedRatings) {
-        const ratings = JSON.parse(savedRatings);
-        setStockRatings(ratings);
-      }
-    } catch (error) {
-      console.error('Error loading ratings from localStorage:', error);
-      localStorage.removeItem('stockRatings');
-    } finally {
-      hasLoadedSettings.current = true;
-      // Mark as initialized immediately since table settings are loaded in initial state
-      setIsInitialized(true);
-    }
-  }, []);
-
-  // Save table settings to localStorage when they change (only after initial load)
+  // Save table settings to localStorage when they change
   useEffect(() => {
-    if (!isInitialized) return;
-
     try {
       const settings = {
         visibility: columnVisibility,
@@ -157,7 +146,7 @@ export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
     } catch (error) {
       console.error('Error saving settings to localStorage:', error);
     }
-  }, [columnVisibility, columnOrder, columnSizing, isInitialized]);
+  }, [columnVisibility, columnOrder, columnSizing]);
 
   const handleCopyAnalysisPrompt = async (stock: StockHolding) => {
     const analysisPrompt = `${stock.name} ${stock.ticker}
@@ -206,83 +195,40 @@ Promoter & Management Integrity
     }
   };
 
-  const handleRatingChange = useCallback(
-    (ticker: string, ratingType: keyof StockRatings[string], value: RatingValue) => {
+  const handleRatingChange = useCallback((ticker: string, ratingType: string, value: RatingValue) => {
+    console.log(`Rating change: ${ticker} - ${ratingType} = ${value}`);
+    setStockRatings((prevRatings) => {
       const updatedRatings = {
-        ...stockRatings,
+        ...prevRatings,
         [ticker]: {
-          ...stockRatings[ticker],
+          ...prevRatings[ticker],
           [ratingType]: value,
         },
       };
-      setStockRatings(updatedRatings);
+      console.log('Updated ratings:', updatedRatings);
       localStorage.setItem('stockRatings', JSON.stringify(updatedRatings));
-    },
-    [stockRatings]
-  );
+      return updatedRatings;
+    });
+  }, []);
 
-  const handleNotesChange = useCallback(
-    (ticker: string, notes: string) => {
+  const handleNotesChange = useCallback((ticker: string, notes: string) => {
+    console.log(`Notes change: ${ticker} = ${notes}`);
+    setStockRatings((prevRatings) => {
       const updatedRatings = {
-        ...stockRatings,
+        ...prevRatings,
         [ticker]: {
-          ...stockRatings[ticker],
+          ...prevRatings[ticker],
           notes: notes,
         },
       };
-      setStockRatings(updatedRatings);
       localStorage.setItem('stockRatings', JSON.stringify(updatedRatings));
-    },
-    [stockRatings]
-  );
+      return updatedRatings;
+    });
+  }, []);
 
-  const RatingSelector = useCallback(
-    ({ ticker, ratingType }: { ticker: string; ratingType: keyof StockRatings[string] }) => {
-      const currentRating = stockRatings[ticker]?.[ratingType] || '';
-      return (
-        <FormControl size="small" sx={{ minWidth: 120 }}>
-          <Select
-            value={currentRating}
-            onChange={(e) => handleRatingChange(ticker, ratingType, e.target.value as RatingValue)}
-            displayEmpty
-            sx={{ fontSize: '0.875rem' }}
-          >
-            <MenuItem value="">
-              <em>Not Set</em>
-            </MenuItem>
-            {Object.values(Rating).map((rating) => (
-              <MenuItem key={rating} value={rating}>
-                {rating}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      );
-    },
-    [stockRatings, handleRatingChange]
-  );
-
-  const NotesInput = useCallback(
-    ({ ticker }: { ticker: string }) => {
-      const currentNotes = stockRatings[ticker]?.notes || '';
-      return (
-        <TextField
-          multiline
-          rows={2}
-          value={currentNotes}
-          onChange={(e) => handleNotesChange(ticker, e.target.value)}
-          placeholder="Add notes..."
-          size="small"
-          sx={{ minWidth: 150, maxWidth: 200 }}
-          variant="outlined"
-        />
-      );
-    },
-    [stockRatings, handleNotesChange]
-  );
-
-  const columns = useMemo<ColumnDef<StockHolding>[]>(
-    () => [
+  const columns = useMemo<ColumnDef<StockHolding>[]>(() => {
+    console.log('Creating columns with stockRatings:', stockRatings);
+    return [
       {
         accessorKey: 'logo',
         header: '',
@@ -361,25 +307,52 @@ Promoter & Management Integrity
       {
         id: 'gemini_rating',
         header: 'Gemini Rating',
-        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="gemini_rating" />,
+        cell: ({ row }) => (
+          <RatingSelector
+            ticker={row.original.ticker}
+            ratingType="gemini_rating"
+            currentValue={stockRatings[row.original.ticker]?.gemini_rating || ''}
+            onRatingChange={handleRatingChange}
+          />
+        ),
         size: 140,
       },
       {
         id: 'perplexity_rating',
         header: 'Perplexity Rating',
-        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="perplexity_rating" />,
+        cell: ({ row }) => (
+          <RatingSelector
+            ticker={row.original.ticker}
+            ratingType="perplexity_rating"
+            currentValue={stockRatings[row.original.ticker]?.perplexity_rating || ''}
+            onRatingChange={handleRatingChange}
+          />
+        ),
         size: 140,
       },
       {
         id: 'alpha_spread_rating',
         header: 'Alpha Spread Rating',
-        cell: ({ row }) => <RatingSelector ticker={row.original.ticker} ratingType="alpha_spread_rating" />,
+        cell: ({ row }) => (
+          <RatingSelector
+            ticker={row.original.ticker}
+            ratingType="alpha_spread_rating"
+            currentValue={stockRatings[row.original.ticker]?.alpha_spread_rating || ''}
+            onRatingChange={handleRatingChange}
+          />
+        ),
         size: 160,
       },
       {
         id: 'notes',
         header: 'Notes',
-        cell: ({ row }) => <NotesInput ticker={row.original.ticker} />,
+        cell: ({ row }) => (
+          <NotesInput
+            ticker={row.original.ticker}
+            initialValue={stockRatings[row.original.ticker]?.notes || ''}
+            onNotesChange={handleNotesChange}
+          />
+        ),
         size: 200,
       },
       {
@@ -404,9 +377,8 @@ Promoter & Management Integrity
       //   ),
       //   size: 120,
       // },
-    ],
-    [stockRatings, handleCopyAnalysisPrompt, RatingSelector]
-  );
+    ];
+  }, [stockRatings, handleCopyAnalysisPrompt, handleRatingChange, handleNotesChange]);
 
   const table = useReactTable({
     data,
@@ -498,48 +470,13 @@ Promoter & Management Integrity
       <Paper sx={{ width: '100%', mb: 2 }}>
         <TableContainer>
           <Table stickyHeader>
-            <TableHead>
-              {table.getHeaderGroups().map((headerGroup) => (
-                <TableRow key={headerGroup.id}>
-                  {headerGroup.headers.map((header) => (
-                    <TableCell
-                      key={header.id}
-                      sx={{
-                        fontWeight: 'bold',
-                        whiteSpace: 'nowrap',
-                        cursor: header.column.getCanSort() ? 'pointer' : 'default',
-                        backgroundColor: 'background.paper',
-                      }}
-                      onClick={header.column.getToggleSortingHandler()}
-                    >
-                      {/* <TableSortLabel
-                        active={!!header.column.getIsSorted()}
-                        direction={header.column.getIsSorted() as 'asc' | 'desc' | undefined}
-                      > */}
-                      {flexRender(header.column.columnDef.header, header.getContext())}
-                      {/* </TableSortLabel> */}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))}
-            </TableHead>
+            <PortfolioTableHeader headerGroups={table.getHeaderGroups()} />
             <TableBody>
-              {table.getRowModel().rows.map((row) => (
-                <TableRow key={row.id} hover sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell
-                      key={cell.id}
-                      sx={{
-                        py: 1.5,
-                        borderBottom: '1px solid',
-                        borderColor: 'divider',
-                      }}
-                    >
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))}
+              {table.getRowModel().rows.map((row) => {
+                const ticker = row.original.ticker;
+                const ratingsKey = JSON.stringify(stockRatings[ticker] || {});
+                return <PortfolioTableRow key={`${row.id}-${ratingsKey}`} row={row} />;
+              })}
             </TableBody>
           </Table>
         </TableContainer>
