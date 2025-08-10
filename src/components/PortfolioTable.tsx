@@ -140,12 +140,6 @@ export const PortfolioTable = ({ data, loading }: PortfolioTableProps) => {
 
   const handleCopyAnalysisPrompt = async (stock: StockHolding) => {
     const analysisPrompt = `${stock.name} ${stock.ticker}
-
-Current Holdings:
-- Quantity: ${stock.quantity}
-- Average Price: ${formatCurrency(stock.avg_price)}
-- Invested Amount: ${formatCurrency(stock.invested_amount)}
-
 Analyze the stock and provide a detailed long-term investment recommendation: Strong Buy, Buy, Hold, Sell or Strong Sell.
 Your analysis should include the following sections:
 Company Overview
