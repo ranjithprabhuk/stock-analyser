@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Container, Paper, Grid } from '@mui/material';
+import { Box, Typography, Button, Container, Paper } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Home = () => {
@@ -21,13 +21,7 @@ const Home = () => {
             Your one-stop solution for portfolio management and stock analysis
           </Typography>
           <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', gap: 2 }}>
-            <Button
-              component={RouterLink}
-              to="/us-portfolio"
-              variant="contained"
-              color="secondary"
-              size="large"
-            >
+            <Button component={RouterLink} to="/us-portfolio" variant="contained" color="secondary" size="large">
               US Portfolio
             </Button>
             <Button
@@ -45,8 +39,14 @@ const Home = () => {
       </Box>
 
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
+        <Box 
+          sx={{ 
+            display: 'grid', 
+            gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, 
+            gap: 4 
+          }}
+        >
+          <Box>
             <Paper elevation={3} sx={{ p: 3, height: '100%' }}>
               <Typography variant="h5" gutterBottom>
                 US Portfolio Analysis
@@ -54,17 +54,12 @@ const Home = () => {
               <Typography paragraph>
                 Upload and analyze your US stock portfolio with detailed insights and performance metrics.
               </Typography>
-              <Button
-                component={RouterLink}
-                to="/us-portfolio"
-                variant="outlined"
-                color="primary"
-              >
+              <Button component={RouterLink} to="/us-portfolio" variant="outlined" color="primary">
                 Get Started
               </Button>
             </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
+          </Box>
+          <Box>
             <Paper elevation={3} sx={{ p: 3, height: '100%' }}>
               <Typography variant="h5" gutterBottom>
                 Indian Portfolio
@@ -72,17 +67,12 @@ const Home = () => {
               <Typography paragraph>
                 Manage and analyze your Indian stock portfolio with comprehensive tools and analysis.
               </Typography>
-              <Button
-                component={RouterLink}
-                to="/indian-portfolio"
-                variant="outlined"
-                color="primary"
-              >
+              <Button component={RouterLink} to="/indian-portfolio" variant="outlined" color="primary">
                 Explore
               </Button>
             </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
+          </Box>
+          <Box>
             <Paper elevation={3} sx={{ p: 3, height: '100%' }}>
               <Typography variant="h5" gutterBottom>
                 Stock Screener
@@ -90,17 +80,12 @@ const Home = () => {
               <Typography paragraph>
                 Discover potential investment opportunities with our powerful stock screening tools.
               </Typography>
-              <Button
-                component={RouterLink}
-                to="/screener"
-                variant="outlined"
-                color="primary"
-              >
+              <Button component={RouterLink} to="/screener" variant="outlined" color="primary">
                 Start Screening
               </Button>
             </Paper>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
