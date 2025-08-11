@@ -18,9 +18,11 @@ import {
   CircularProgress,
   Snackbar,
   Alert,
+  Button,
 } from '@mui/material';
 import ViewColumnIcon from '@mui/icons-material/ViewColumn';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import type { StockHolding } from '../types/portfolio';
 import { StockAnalysisModal } from './StockAnalysisModal';
 import { NotesInput } from './NotesInput';
@@ -207,6 +209,69 @@ Promoter & Management Integrity
       return updatedRatings;
     });
   }, []);
+
+  const exportToCSV = useCallback(() => {
+    if (!data || data.length === 0) return;
+
+    // Define the headers for the CSV
+    const headers = [
+      'Ticker',
+      'Company Name',
+      'Sector',
+      'Quantity',
+      'Average Price ($)',
+      'Current Price ($)',
+      'Invested Amount ($)',
+      'Current Value ($)',
+      'Total P&L ($)',
+      'Total P&L (%)',
+      'Today P&L ($)',
+      'Today P&L (%)',
+      'Market Cap',
+      'Gemini Rating',
+      'Perplexity Rating',
+      'Alpha Spread Rating',
+      'Notes',
+    ];
+
+    // Convert data to CSV format
+    const csvContent = [
+      headers.join(','),
+      ...data.map((stock) => {
+        const ratings = stockRatings[stock.ticker] || {};
+        return [
+          `"${stock.ticker}"`,
+          `"${stock.name}"`,
+          `"${stock.sector}"`,
+          stock.quantity,
+          stock.avg_price.toFixed(2),
+          stock.live_price.toFixed(2),
+          stock.invested_amount.toFixed(2),
+          stock.current_value.toFixed(2),
+          stock.total_profit_loss.toFixed(2),
+          stock.total_percent_change.toFixed(2),
+          stock.todays_profit_loss.toFixed(2),
+          stock.todays_percent_change.toFixed(2),
+          `"${stock.market_cap}"`,
+          `"${ratings.gemini_rating || ''}"`,
+          `"${ratings.perplexity_rating || ''}"`,
+          `"${ratings.alpha_spread_rating || ''}"`,
+          `"${(ratings.notes || '').replace(/"/g, '""')}"`, // Escape quotes in notes
+        ].join(',');
+      }),
+    ].join('\n');
+
+    // Create and download the file
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `portfolio_data_${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, [data, stockRatings]);
 
   const columns = useMemo<ColumnDef<StockHolding>[]>(() => {
     return [
@@ -442,11 +507,18 @@ Promoter & Management Integrity
         <Typography variant="h6" color="text.primary">
           Your Portfolio
         </Typography>
-        <Tooltip title="Configure columns">
-          <IconButton onClick={handleColumnMenuOpen}>
-            <ViewColumnIcon />
-          </IconButton>
-        </Tooltip>
+        <Box display="flex" gap={1}>
+          <Tooltip title="Export to CSV">
+            <Button variant="outlined" size="small" startIcon={<FileDownloadIcon />} onClick={exportToCSV}>
+              Export CSV
+            </Button>
+          </Tooltip>
+          <Tooltip title="Configure columns">
+            <IconButton onClick={handleColumnMenuOpen}>
+              <ViewColumnIcon />
+            </IconButton>
+          </Tooltip>
+        </Box>
       </Box>
 
       <Paper sx={{ width: '100%', mb: 2 }}>
